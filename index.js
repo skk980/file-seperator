@@ -17,10 +17,10 @@ noNofiles.addEventListener('change', () => {
 document.querySelector('.submit').addEventListener("click", function(event) {
     const selectcandidate = document.querySelector('.selectcandidate')
     document.querySelector('.newCanlist').innerHTML = ''
-    if ( selectcandidate?.value && !listofCandidate.includes(selectcandidate?.value?.trim())) {
-        listofCandidate.push(event?.target?.value.trim())
+    if ( selectcandidate.value && !listofCandidate.includes(selectcandidate.value?.trim())) {
+        listofCandidate.push(event.target.value?.trim())
         document.querySelector('.selectcandidatelist').innerHTML += ` <li class="list-group-item d-flex justify-content-between align-items-center">
-        ${selectcandidate?.value?.trim()}
+        ${selectcandidate.value?.trim()}
      </li>`
      document.querySelector('.selectcandidate').value =''
     } else {
@@ -37,14 +37,14 @@ document.querySelector('.submit').addEventListener("click", function(event) {
 document.querySelector('.selectcandidate').addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         document.querySelector('.newCanlist').innerHTML = ''
-        if ( event?.target?.value && !listofCandidate.includes(event?.target?.value?.trim())) {
-            listofCandidate.push(event?.target?.value?.trim())
+        if ( event?.target?.value && !listofCandidate.includes(event.target.value?.trim())) {
+            listofCandidate.push(event.target.value?.trim())
             document.querySelector('.selectcandidatelist').innerHTML += ` <li class="list-group-item d-flex justify-content-between align-items-center">
-            ${event?.target?.value?.trim()}
+            ${event.target.value?.trim()}
          </li>`
          document.querySelector('.selectcandidate').value = ''
         } else {
-            if(!event?.target?.value){
+            if(!event.target?.value){
                 alert('Enter value')
             }else{
                 alert('same value entered')
