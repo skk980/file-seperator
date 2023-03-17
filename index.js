@@ -6,7 +6,7 @@ noNofiles.addEventListener('change', () => {
     [...noNofiles.files].forEach(e => {
         fileslist.push(e.name)
         document.querySelector('.newCanlist').innerHTML = ''
-        document.querySelector('.selectfileslist').innerHTML += ` <li class="list-group-item d-flex justify-content-between align-items-center">
+        document.querySelector('.selectfileslist').innerHTML += ` <li class="list-group-item overflow-auto d-flex justify-content-between align-items-center">
     ${e?.name}
 </li>`
 

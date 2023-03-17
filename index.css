@@ -51,4 +51,5 @@ input {
     background: rgb(240, 240, 240) !important;
     border: none !important;
     font-weight: bold;
+    padding: 5px 0px;
 }
