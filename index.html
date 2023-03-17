@@ -26,13 +26,16 @@
         <div class="d-md-flex justify-content-around p-5 selectpart">
             <div class="mb-3 w-md-25">
                 <label for="formFileMultiple" class="form-label">Enter Candidate Name</label>
-                <input class="form-control selectcandidate" placeholder="Enter Name" type="input" id="formFileMultiple" multiple>
+                <div class="w-100 d-flex">
+                    <input class="form-control selectcandidate" placeholder="Enter Name" type="input" id="formFileMultiple" multiple>
+                    <button class="btn btn-primary submit" type="submit">Submit</button>
+                </div>
                 <ul class="list-group py-4 selectcandidatelist">
 
                 </ul>
             </div>
             <div class="mb-3 w-md-25">
-                <label for="formFileMultiple" class="form-label">Enter Count</label>
+                <label for="formFileMultiple" class="form-label">Enter Count to divide files</label>
                 <input class="form-control selectcount" placeholder="Enter Count" type="input" id="formFileMultiple">
             </div>
             <div class="mb-3 w-md-25">
