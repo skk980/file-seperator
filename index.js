@@ -88,29 +88,34 @@ document.querySelector('.calculate').addEventListener('click', () => {
     document.querySelector('.selectcount').value = ''
     document.querySelector('.selectcandidate').value = ''
     document.querySelector('.selectfiles').value = ''
+
+
+    setTimeout(()=>{
+        if (Object.keys(list).length) {
+            Object.keys(list).forEach(item=>{
+               if( item && item!=='undefined'){
+                    
+                document.querySelector('.newCanlist').innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start optionValue">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold ">${item ? item :''}</div>
+                    <div class='d-md-flex py-3'>
+                     ${
+                         list[item].filter((e,i)=>e!==undefined).map(element => `<div  class="alert alert-primary listofdata">
+                         ${element}
+                       
+                    </div>`)
+                     }
+                     </div>
+                </div>
+            </li>`
+               }
+            })
+        }
+    },1000)
     
    
     
-    if (Object.keys(list).length) {
-        Object.keys(list).forEach(item=>{
-           if(item!=='undefined'){
-                
-            document.querySelector('.newCanlist').innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start optionValue">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold ">${item}</div>
-                <div class='d-md-flex py-3'>
-                 ${
-                     list[item].filter((e,i)=>e!==undefined).map(element => `<div  class="alert alert-primary listofdata">
-                     ${element}
-                   
-                </div>`)
-                 }
-                 </div>
-            </div>
-        </li>`
-           }
-        })
-    }
+   
 
     
     
