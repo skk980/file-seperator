@@ -80,8 +80,8 @@ const getlist = (i) => {
 document.querySelector('.calculate').addEventListener('click', () => {
     const list = getlist(0)
     
-    listofCandidate = [] 
-    fileslist=[]
+    // listofCandidate = [] 
+    // fileslist=[]
 
     document.querySelector('.selectfileslist').innerHTML = ''
     document.querySelector('.selectcandidatelist').innerHTML = ''
