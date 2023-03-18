@@ -80,8 +80,8 @@ const getlist = (i) => {
 document.querySelector('.calculate').addEventListener('click', () => {
     const list = getlist(0)
     
-    // listofCandidate = [] 
-    // fileslist=[]
+    listofCandidate = [] 
+    fileslist=[]
 
     document.querySelector('.selectfileslist').innerHTML = ''
     document.querySelector('.selectcandidatelist').innerHTML = ''
@@ -93,7 +93,7 @@ document.querySelector('.calculate').addEventListener('click', () => {
     setTimeout(()=>{
         if (Object.keys(list).length) {
             Object.keys(list).forEach(item=>{
-               if( item && item!=='undefined'){
+               
                     
                 document.querySelector('.newCanlist').innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start optionValue">
                 <div class="ms-2 me-auto">
@@ -108,7 +108,7 @@ document.querySelector('.calculate').addEventListener('click', () => {
                      </div>
                 </div>
             </li>`
-               }
+               
             })
         }
     },1000)
